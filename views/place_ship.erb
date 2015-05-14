@@ -1,6 +1,4 @@
-<h1> <%= @message %> </h1>
-<h1> <%= @player %> </h1>
-
+<h3> <%= @message %> </h3>
 <form action='/game/place-ship' method="post">
   <input text='text' name='coordinate'>
   <input type='radio' name='orientation' value="horizontally" id = "horizontally" checked> Horizontally
@@ -12,4 +10,4 @@
 
 <br>
 
-<a href='/game/fire'>Shoot ships</a>
+<a class="btn btn-danger button" href='/game/fire'>Shoot ships</a>

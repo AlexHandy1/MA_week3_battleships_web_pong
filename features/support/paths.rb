@@ -13,6 +13,9 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /Player 1/
+      '/player1'
+
     when /the New Game page/
       '/game/new'
 

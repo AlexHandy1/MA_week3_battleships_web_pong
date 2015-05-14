@@ -4,14 +4,16 @@ Feature: Place a ship
   So that my enemy has something to fire at
 
   Scenario: User places a ship within board (defaults to horizontal)
-    Given I am on place ship page
+    Given I am on Player 1
+    And I am on place ship page
     And I fill in "coordinate" with "A1"
     When I press "place ship"
     Then I should see "CCC"
 
 
   Scenario: User places a ship within board (vertical)
-    Given I am on place ship page
+    Given I am on Player 1
+    And I am on place ship page
     And I fill in "coordinate" with "E4"
     And I choose radio button "vertically"
     When I press "place ship"
@@ -21,7 +23,8 @@ Feature: Place a ship
 
   @ignore
   Scenario: User places a ship on top of another
-    Given I am on place ship page
+    Given I am on Player 1
+    And I am on place ship page
     And I fill in "coordinate" with "E4"
     When I press "place ship"
     Then I should see "Error: ship overlay or outside board"
